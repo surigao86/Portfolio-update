@@ -1,0 +1,78 @@
+
+.sidebar {
+    .lt-ie10 & {
+        display: none;
+    }
+
+    position: relative;
+    padding: ($gutter / 2) 0 4.5rem;
+    width: $sidebar-width;
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    background: #e8e8e9;
+
+    
+    &__navigation,
+    &__footer {
+        padding: ($gutter / 2) $gutter;
+    }
+
+    &__footer {
+        font-size: 1.3rem;
+        font-weight: 300;
+    }
+}
+
+.sidebar-nav {
+    display: none;
+
+    @media ( min-width: $screen-sm-min ) {
+        display: block;
+    }
+
+    &__wrap {
+        position: relative;
+        width: 100%;
+        max-width: 33rem;
+
+        &--sticky {
+            position: fixed;
+            top: 16.5rem;
+        }
+    }
+
+    &__menu {
+        margin: 0 auto 4rem;
+        padding: 0;
+        list-style: none;
+    }
+    &__menuitem {
+        position: relative;
+        font-size: 1.6rem;
+        font-weight: 600;
+        margin-bottom: 1.7rem;
+
+        a {
+            text-decoration: none;
+            color: $font-color;
+        }
+
+        &--active {
+            a {
+                color: $color-purple;
+            }
+            &:before {
+                display: block;
+                position: absolute;
+                top: 0;
+                content: "";
+                left: -2rem;
+                height: 100%;
+                width: 2px;
+                background: $color-purple;
+            }
+        }
+    }
+}

@@ -1,0 +1,219 @@
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h4, .h5,
+h4, .h6 {
+	display: block;
+	margin: 0 0 $spacing;
+	color: $color-purple;
+	font-weight: 400;
+
+	a {
+		color: $color-purple;
+		text-decoration: none;
+
+		&:hover {
+			color: #8e5999;
+		}
+	}
+
+	p + & {
+		margin-top: $gutter * 2;
+	}
+
+	@media ( min-width: $screen-sm-min ) {
+		margin: 0 0 $gutter;
+	}
+}
+
+h1,
+.h1 {
+	line-height: 1.2;
+	font-weight: 600;
+	font-size: 4rem;
+
+	@media ( min-width: $screen-sm-min ) {
+		font-size: 5.5rem;
+	}
+}
+ 
+h2,
+.h2 {
+	font-size: 2.8rem;
+	line-height: 1.25;
+
+	p + &,
+	ul + & {
+		margin-top: $gutter;
+	}
+
+	@media ( min-width: $screen-sm-min ) {
+		font-size: 3.2rem;
+	}
+
+	&.smaller {
+		font-size: 2.2rem;
+
+		@media ( min-width: $screen-sm-min ) {
+			font-size: 2.8rem;
+		}
+	}
+	&.larger {
+		font-size: 3.5rem;
+		line-height: 4.4rem;
+	}
+}
+
+h3,
+.h3 {
+	margin: $spacing 0;
+	font-size: 2rem;
+	line-height: 1.25;
+
+	p + &,
+	ul + & {
+		margin-top: $gutter;
+	}
+
+	@media ( min-width: $screen-sm-min ) {
+		font-size: 2.2rem;
+	}
+}
+
+h4,
+.h4 {
+	margin-bottom: $spacing;
+	font-size: $font-size-lg;
+	font-weight: 600;
+	line-height: 1.5;
+	color: $font-color;
+
+	@media ( min-width: $screen-sm-min ) {
+		font-size: 2rem;
+	}
+}
+
+h5,
+.h5,
+h6,
+.h6 {
+	margin-bottom: $spacing;
+	font-size: $font-size;
+	font-weight: 600;
+	color: $font-color;
+
+	@media ( min-width: $screen-sm-min ) {
+		font-size: $font-size-lg;
+	}
+}
+
+h6,
+.h6 {
+	font-size: $font-size;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+
+	&--bold {
+		font-weight: 600;
+	}
+}
+
+.heading-segment {
+	font-weight: 500;
+	font-size: 2.8rem;
+	line-height: 4.4rem;
+	color: $color-purple;
+	text-align: center;
+
+	@media ( min-width: $screen-sm-min ) {
+		font-size: 3.5rem;
+		margin-bottom: 12.5rem;
+	}
+}
+
+.heading-lite {
+	font-size: 2.8rem;
+
+	@media ( min-width: $screen-sm-min ) {
+		font-size: 3.5rem;
+		line-height: 4.4rem;
+	}
+
+	font-weight: 300;
+	color: $color-purple;
+
+	&--muted {
+		color: $font-color;
+	}
+
+	&--centered {
+		@extend .heading-lite;
+
+		text-align: center;
+	}
+
+	&--tall {
+		margin-bottom: 6rem;
+	}
+}
+
+.heading-label {
+	display: inline-block;
+	margin: 0 auto;
+	padding-bottom: 0.8rem;
+	color: $color-purple;
+	font-size: 1.7rem;
+	font-weight: 600;
+	border-bottom: 2px solid $border-grey;
+
+	&--hidden {
+		display: none;
+		border-bottom: 2px solid transparent;
+
+		@media ( min-width: $screen-md-min ) {
+			display: inline-block;
+		}
+	}
+}
+
+.heading-content {
+	margin: 2.2rem auto 0;
+	font-size: 2.8rem;
+	line-height: 3.5rem;
+	color: #38383a;
+
+	@media ( min-width: $screen-md-min ) {
+		font-size: 3.5rem;
+		line-height: 4.4rem;
+	}
+
+	&+p {
+		margin-top: 1rem;
+	}
+}
+
+.heading-condensed {
+	margin: 0;
+	font-size: 3.5rem;
+	font-family: 'proxima-nova-condensed', sans-serif;
+	font-weight: 400;
+	color: #ffffff;
+}
+
+.heading-serif {
+	font-family: $font-family-serif;
+}
+
+.segment-lead {
+	// on pricing page under pricing plans
+	@media ( min-width: $screen-sm-min ) {
+		margin-bottom: $gutter * 3;
+	}
+}

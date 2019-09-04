@@ -1,0 +1,89 @@
+.footer {
+	position: relative;
+	z-index: 1;
+	padding: 3rem 0 3rem;
+	color: #fff;
+	font-size: 1.4rem;
+	overflow: hidden;
+	// border-top: 1px solid #4c5392;
+	background: #52556e;
+
+	@media ( min-width: $screen-sm-min ) {
+		padding: 2rem 0 1.5rem;
+	}
+
+	.container {
+		position: relative;
+	}
+
+	a {
+		color: #acb4be;
+		text-decoration: none;
+		font-weight: 500;
+
+		&:hover {
+			color: #fff;
+		}
+	}
+
+	&__logo {
+		float: left;
+		width: 11.5rem;
+		height: 7rem;
+	}
+
+	.social-icons {
+		text-align: center;
+		margin: 2.5rem auto 2rem;
+
+		@media ( min-width: $screen-sm-min ) {
+			text-align: left;
+			float: left;
+		}
+
+		a {
+			margin: 0 10px 0 0;
+			color: #c8cadd;
+		}
+
+		img {
+			opacity: 0.6;
+			transition: opacity 0.25s;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	.copyright {
+		float: none;
+		display: block;
+		clear: both;
+		text-align: center;
+		color: #c8cadd;
+		margin: 2.5rem 0 0 0;
+		
+		@media ( min-width: $screen-sm-min ) {
+			float: right;
+			clear: none;
+			text-align: left;
+		}
+
+		a {
+			color: #c8cadd;
+
+			&:hover {
+				color: lighten(#c8cadd, 10%);
+			}
+		}
+	}
+
+	.sep {
+		display: inline-block;
+		width: 1px;
+		height: 10px;
+		margin: 0 6px;
+		background: #c8cadd;
+	}
+}

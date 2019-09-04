@@ -1,0 +1,81 @@
+.more {
+    display: inline-block;
+    position: relative;
+    height: auto;
+    font-size: $font-size;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    .product &,
+    &--alt {
+        text-transform: none;
+    }
+
+    @media ( min-width: $screen-sm-min ) {
+        white-space: nowrap;
+        font-size: 1.6rem;
+    }
+
+    &:after {
+        position: relative;
+        right: -5px;
+        top: 0;
+        bottom: 1px;
+        height: 1em;
+        margin: auto;
+        font: 1rem/1 'icomoon';
+        content: "\e603";
+        transition: right $animation-speed;
+    }
+
+    &:hover:after,
+    a:hover &:after {
+        right: -10px;
+    }
+
+    &--buffer {
+        @media ( min-width: $screen-sm-min ) {
+            padding-left: 1rem;
+        }
+    }
+
+    span & {
+        // fake links 
+        color: $link-color;
+    }
+
+    &--down {
+        &:after {
+            position: relative;
+            right: -5px;
+            top: 0;
+            bottom: 1px;
+            height: 1em;
+            margin: auto;
+            font: 1rem/1 'icomoon';
+            content: "\e604";
+        }
+        &:hover:after,
+        a:hover &:after {
+            right: -5px;
+        }
+    }
+    &--up {
+        &:after {
+            position: relative;
+            right: -5px;
+            top: -2px;
+            bottom: 1px;
+            height: 1em;
+            margin: auto;
+            font: 1rem/1 'icomoon';
+            content: "\e602";
+        }
+        &:hover:after,
+        a:hover &:after {
+            right: -5px;
+        }
+    }
+
+}

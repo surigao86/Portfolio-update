@@ -1,0 +1,190 @@
+// @import '../config';
+
+.actions {
+    $button-height: 3.5rem;
+    font-size: 0;
+
+    &__button,
+    &__phone {
+        display: inline-block;
+        margin-left: 2rem;
+        width: $button-height;
+        height: $button-height;
+        line-height: $button-height;
+        vertical-align: middle;
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: rgba(255,255,255, 1);
+        cursor: pointer;
+        border-radius: 50%;
+        border: 1px solid rgba(255,255,255, .25);
+        transition: color $header-animation-speed, border $header-animation-speed, background $header-animation-speed;
+
+        .header--hover & {
+            color: rgba(255,255,255, .5);
+
+            .header-wrap--fixed & {
+                color: rgba(255,255,255, 1);
+            }
+        }
+
+        .header-wrap--fixed & {
+            display: none;
+        }
+
+        &.hover,
+        &:hover {
+            color: #fff;
+            border-color: rgba(255,255,255, 0.5);
+        }
+    }
+
+    &__phone {
+        position: relative;
+        overflow: hidden;
+
+        &.hover,
+        &:hover {
+            color: #fff;
+        }
+
+        [class*="icon-"] {
+            display: block;
+            font-size: 1.2rem;
+            text-align: center;
+            line-height: $button-height;
+        }
+
+        @media (min-width: $screen-md-max){
+
+            span {
+                position: absolute;
+                top: 0;
+                left: 0;
+                font-family: $font-family-condensed;
+                font-weight: 500;
+                font-size: 1.5rem;
+                white-space: nowrap;
+                opacity: 0;
+                transition:  transform 0.4s, opacity 0.4s;
+                transform: translateX(-100%);
+            }
+
+            &--active {
+                overflow: visible;
+
+                &.hover,
+                &:hover {
+                    border-color: rgba(255,255,255, 0.5);
+                }
+
+                span {
+                    opacity: 1;
+                    transform: translateX(-110%);
+                }
+            }
+        }
+
+        @media (max-width: $screen-md-max){
+            overflow: visible;
+
+            span {
+                display: block;
+                position: absolute;
+                top: 4.5rem;
+                left: 50%;
+                padding: 0 $spacing;
+                text-align: center;
+                white-space: nowrap;
+                color: $font-color;
+                border-radius: .3rem;
+                border: .1rem solid #e2e2e3;
+                border-bottom-width: 2px;
+                background: #fff;
+                transition: transform 0.2s, opacity 0.2s;
+                opacity: 0;
+                transform: translateX(-50%) translateY(-0.5rem);
+            }
+
+            &.hover span {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0rem);
+            }
+        }
+    }
+
+    &__button {
+        padding: 0 1.4rem;
+        width: auto;
+        text-transform: uppercase;
+        border-radius: 0.3rem;
+        
+        @media (min-width: $screen-lg-min){
+            padding: 0 2rem;
+        }
+        
+        &.hover {
+        }
+
+        &--no-border {
+            padding: 0;
+            border-style: none;
+
+            &.hover,
+            &:hover {
+                background: transparent;
+            }
+        }
+
+        &--product {
+            display: none;
+            opacity: 0;
+            transition: opacity $header-animation-speed;
+
+            .header-wrap--fixed & {
+                display: inline-block;
+                margin-left: 1rem;
+                border: 0 none;
+                opacity: 1;
+                transition: all $header-animation-speed;
+
+                @media (min-width: $screen-lg-min){
+                    margin-left: 2rem;
+                }
+            }
+            
+        }
+    }
+
+    &__color {
+        &--purple {
+            background: $color-purple;
+        }
+        &--blue {
+            background: #2676A5;
+        }
+        &--green {
+            border-color: $color-green;
+            background: $color-green;
+
+            &:hover {
+                border-color: #2f7b5f;
+                background: #2f7b5f;
+            }
+        }
+        &--grey,
+        &--gray {
+            background: #38383A;
+        }
+        &--bluegrey,
+        &--bluegray {
+            background: #59697e;
+            border-color: #59697e;
+
+            &:hover {
+                border-color: #475465;
+                background: #475465;
+            }
+        }
+    }
+}

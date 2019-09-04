@@ -1,0 +1,36 @@
+.wrap {
+
+    &__sidebar,
+    &__content {
+        -webkit-transition: -webkit-transform 0.4s;
+        -ms-transition: -ms-transform 0.4s;
+        transition: transform 0.4s;
+    }
+
+    &__content {
+
+        html.sidebar-open & {
+            -webkit-transform: translate3d(-$sidebar-width, 0, 0);
+            -ms-transform: translate3d(-$sidebar-width, 0, 0);
+            transform: translate3d(-$sidebar-width, 0, 0);
+
+            @media ( min-width: $screen-md-min ) {
+                -webkit-transform: translate3d(0, 0, 0);
+                -ms-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+        }
+    }
+
+    &__sidebar {
+        -webkit-transform: translate3d($sidebar-width, 0, 0);
+        -ms-transform: translate3d($sidebar-width, 0, 0);
+        transform: translate3d($sidebar-width, 0, 0);
+
+        html.sidebar-open & {
+            -webkit-transform: translate3d(0, 0, 0);
+            -ms-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+    }
+}

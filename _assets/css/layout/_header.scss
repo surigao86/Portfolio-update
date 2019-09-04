@@ -1,0 +1,187 @@
+// @import "../config";
+
+@import "header-actions";
+
+.header-wrap {
+    position: relative;
+    width: 100%;
+    height: $header-height;
+    background: #52556e;
+    // border-bottom: 1px solid #52556e;
+
+    // preload background image
+    &:after{
+        position:absolute;
+        z-index:-1;
+        visibility: hidden;
+        content: url('../images/logo-white.png');
+    }
+
+}
+
+.header {
+    $height: $header-height;
+    $logo-width: 18.5rem;
+
+    @extend .container;
+
+    position: relative;
+    z-index: 10;
+    margin-bottom: -$height;
+    height: $height;
+    line-height: $height;
+
+    .header-wrap--fixed & {
+        height: $header-height-fixed;
+        line-height: $header-height-fixed;
+
+        @media (max-width: $screen-md-max){ //mobile only
+            background: #fff;
+            border-bottom: 1px solid #e2e2e3;
+        }
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    &__logo {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: $grid-spacing / 2;
+        width: $logo-width;
+        height: $header-height;
+        text-indent: -9999px;
+        background: left center url('../images/logo-white.png') no-repeat;
+        background-size: 18.5rem;
+
+        .header-wrap--fixed & {
+            height: $header-height-fixed;
+        }
+
+        .header--hover & {
+            opacity: .5;
+
+            .header-wrap--fixed & {
+                opacity: 1;
+            }
+        }
+
+        &.hover {
+            opacity: 1;
+        }
+    }
+
+    &__navigation {
+        position: absolute;
+        top: 0;
+
+        @media( min-width: $screen-md-min ) {
+            right: 0rem;
+        }
+
+        @media (max-width: $screen-sm-max){ // mobile only
+            display: none;
+        }
+    }
+
+    &__actions,
+    &__mobile {
+        position: absolute;
+        top: 0;
+        right: $grid-spacing / 2;
+    }
+
+    &__mobile {
+        display: none;
+        color: #fff;
+    }
+
+    @media (max-width: $screen-sm-max){
+        &__actions {
+            display: none;
+        }
+
+        &__mobile {
+            display: block;
+        }
+    }
+}
+
+$mobile-button-width: 2.3rem;
+$mobile-button-height: 0.3rem;
+$mobile-button-spacing: 0.5rem;
+
+.mobile-button {
+    display: block;
+    position: relative;
+    top: ($header-height / 2) - ($mobile-button-width / 2);
+    width: $mobile-button-width;
+    height: $mobile-button-width;
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+
+    span {
+        display: block;
+        position: absolute;
+        top: ($mobile-button-width / 2) - ($mobile-button-height / 2);
+        left: 0;
+        text-indent: -9999px;
+
+        &,
+        &:before,
+        &:after {
+            width: $mobile-button-width;
+            height: $mobile-button-height;
+            background: #fff;
+
+            @media (min-width: $screen-md-min){
+                transition: all 0.4s;
+            }
+
+            .header-wrap--fixed & {
+                background: #545457;
+            }
+        }
+
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            top: -$mobile-button-spacing - $mobile-button-height;
+            left: 0;
+            -webkit-transform-origin: 50% 50%;
+            -ms-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+        }
+
+        html.sidebar-open & {
+            background: transparent;
+        }
+
+        &:before {
+            html.sidebar-open & {
+                top: 0;
+                -webkit-transform: rotateZ(-45deg);
+                -ms-transform: rotateZ(-45deg);
+                transform: rotateZ(-45deg);
+            }
+        }
+
+        &:after {
+            top: auto;
+            bottom: -$mobile-button-spacing - $mobile-button-height;
+
+            html.sidebar-open & {
+                bottom: 0;
+                -webkit-transform: rotateZ(-135deg);
+                -ms-transform: rotateZ(-135deg);
+                transform: rotateZ(-135deg);
+            }
+        }
+    }
+}
+

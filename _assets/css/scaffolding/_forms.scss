@@ -1,0 +1,115 @@
+@import "../components/dropdown";
+
+form {
+
+    .input-defaults {
+        display: block;
+        width: 36rem;
+        max-width: 100%;
+        border-radius: 3px;
+        border: 1px solid $border-grey;
+    }
+
+    $height: 4rem;
+    
+    p {
+        margin-bottom: 2rem;
+    }
+
+    .hs-input {
+        @extend .input-defaults;
+
+        height: $height; 
+        line-height: $height;
+        padding-left: 1.2rem;
+        display: inline-block;
+        max-width: 100%;
+        box-shadow: none;
+
+        &:focus {
+            border: 1px solid darken($border-grey, 10%);
+        }
+
+        &--text,
+        &--tel,
+        &--email {
+            -webkit-appearance: none;
+        }
+
+        &--checkbox {
+            margin-right: .5rem;
+
+            &:checked {
+                
+            }
+        }
+
+        &--radio {
+            margin-right: .5rem;
+        }
+     
+        &--block {
+            display: block;
+            width: 100%;
+        }
+
+        &--inline {
+            display: inline;
+            width: auto;
+        }
+
+    }
+
+
+    .select {
+        @extend .dropdown;  
+        @extend .input-defaults;
+
+        padding-left: 1.2rem;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        color: #8c8c91;
+        background: #f8f8f9 url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2229%22%20height%3D%2248%22%20viewBox%3D%220%200%2029%2048%22%3E%0A%3Cpath%20fill%3D%22%238c8c91%22%20d%3D%22M14.523%2045.825v0c-0.698%200-1.397-0.349-1.921-0.873l-10.651-11.349c-1.048-1.048-0.873-2.794%200.175-3.667%201.048-1.048%202.794-0.873%203.667%200.175l8.73%209.254%208.73-9.254c1.048-1.048%202.619-1.048%203.667-0.175%201.048%201.048%201.048%202.619%200.175%203.667l-10.651%2011.349c-0.524%200.524-1.222%200.873-1.921%200.873z%22%3E%3C/path%3E%0A%3Cpath%20fill%3D%22%238c8c91%22%20d%3D%22M25.174%2018.413c-0.698%200-1.397-0.349-1.921-0.873l-8.73-9.254-8.73%209.254c-0.873%201.222-2.619%201.222-3.667%200.175-1.048-0.873-1.048-2.619%200-3.667l10.651-11.349c1.048-1.048%202.794-1.048%203.841%200l10.476%2011.349c1.048%201.048%200.873%202.794-0.175%203.667-0.524%200.524-1.048%200.698-1.746%200.698z%22%3E%3C/path%3E%0A%3C/svg%3E%0A') 97% 50% no-repeat;
+        background-position: calc(100% - 1.2rem);
+        background-size: 9px 14px;
+
+        &:focus,
+        &:active {
+            outline: none;
+        }
+
+        option {
+            position: relative;
+            z-index: 2;
+            text-indent: 1.2rem;
+        }
+
+    }
+
+    .textarea {
+        @extend .input-defaults;
+
+        width: 100%;
+        max-width: none;
+    }
+
+
+    .label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 1rem;
+
+        &--inline {
+            display: inline-block;
+            margin: 0 .4rem 0 0;
+
+        }
+
+        &--lite {
+            font-weight: 400;
+        }
+
+    }
+
+}

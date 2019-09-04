@@ -1,0 +1,25 @@
+.portfolio-box {
+	&__wrap {
+		display: block;
+		width: 100%;
+		max-width: 600px;
+		margin: 0 auto 6rem;
+		background: #fff;
+		transition: transform 0.25s, box-shadow 0.25s;
+
+		&:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 5px 10px rgba(0,0,0,0.1), 0 10px 15px rgba(0,0,0,0.15), 0 15px 20px rgba(0,0,0,0.2);
+		}
+	}
+
+	&__text {
+		padding: 2rem;
+	}
+
+	&__title {
+		margin: 0;
+		color: #545457;
+		font-weight: 600;
+	}
+} 

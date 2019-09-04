@@ -1,0 +1,13 @@
+
+p,
+.p{
+	margin: $spacing 0;
+
+	&.p--large {
+		font-size: changeunit(18/16,em); // 18px
+	}
+	&.p--space {
+		margin-top: 3rem;
+		margin-bottom: 3rem;
+	}
+}

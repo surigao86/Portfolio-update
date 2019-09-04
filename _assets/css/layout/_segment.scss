@@ -1,0 +1,76 @@
+.segment {
+	position: relative;
+	padding-top: 6rem;
+	padding-bottom: 6rem;
+	background-color: #fff;
+
+	@media ( min-width: $screen-sm-min ) {
+		padding-top: 12.5rem;
+		padding-bottom: 12.5rem;
+
+		&--wider {
+			padding-top: $gutter * 4;
+		}
+	}
+
+	&--grey {
+		background-color: $color-litegrey;
+	}
+	&--darkgrey {
+		background-color: #707074;
+	}
+	&--purple {
+		background-color: $color-purple;
+	}
+	&--darkpurple {
+		background-color: #441c4c;
+	}
+	&--blue {
+		background-color: $color-darkblue;
+	}
+	&--green {
+		background-color: $color-green;
+	}
+	&--bordered {
+		border-top: 1px solid $border-grey;
+	}
+	&--large {
+		padding-top: 6rem;
+		padding-bottom: 6rem;
+
+		@media ( min-width: $screen-sm-min ) {
+			padding-top: 10rem;
+			padding-bottom: 10rem;
+		}
+	}
+	&--medium {
+		padding-top: 6rem;
+		padding-bottom: 6rem;
+
+		@media ( min-width: $screen-sm-min ) {
+			padding-top: ($gutter * 2);
+			padding-bottom: ($gutter * 2);
+		}
+	}
+	&--narrow {
+		padding-top: $gutter;
+		padding-bottom: $gutter;
+
+		@media ( min-width: $screen-sm-min ) {
+			padding-top: 6rem;
+			padding-bottom: 6rem;
+		}
+		
+	}
+
+	&--first {
+		@media ( min-width: $screen-sm-min ) {
+			padding-top: 12.5rem;
+		}
+	}
+	&--last {
+		@media ( min-width: $screen-sm-min ) {
+			padding-bottom: 12.5rem;
+		}
+	}
+}

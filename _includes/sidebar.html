@@ -1,0 +1,21 @@
+<aside class="sidebar">
+    <nav class="sidebar__navigation">
+        {{ include navigation.html className="navigation-mobile" }}
+    </nav>
+    <div class="sidebar__social">
+        <ul>
+            <li>
+                <a href="//twitter.com/recurly">Twitter</a>
+            </li>
+            <li>
+                <a href="//facebook.com/recurly">Facebook</a>
+            </li>
+            <li>
+                <a href="//www.linkedin.com/company/recurly-inc-">Linkedin</a>
+            </li>
+        </ul>
+    </div>
+    <div class="sidebar__footer">
+        &copy; {{ site.time | date: "%Y" }} Recurly, Inc.
+    </div>
+</aside>

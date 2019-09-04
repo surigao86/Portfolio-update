@@ -1,0 +1,20 @@
+.brand {
+	@extend .hide-text;
+
+	height: 3.5rem;
+	width: 11.5rem;
+	background: center url('#{$image-path}logo-white.svg') no-repeat;
+	background-size: contain;
+
+	&--purple {
+		background-image: url('#{$image-path}logo-purple.svg');
+	}
+
+	&--r {
+		width: 7.2rem;
+		height: 7.2rem;
+		margin-left: auto;
+		margin-right: auto;
+		background-image: url('#{$image-path}logo-r.svg');
+	}
+} 

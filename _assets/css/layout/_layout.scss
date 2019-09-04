@@ -1,0 +1,38 @@
+
+@import 'header';
+// @import 'footer';
+@import 'segment';
+@import 'navigation/navigation';
+@import 'navigation/navigation-mobile';
+@import 'navigation/sidebar';
+@import 'wrap-transform';
+
+html.sidebar-open {
+    overflow: hidden;
+}
+
+.wrap {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+
+    &__content {
+
+        html.sidebar-open & {
+            height: 100vh;
+            overflow: hidden;
+            cursor: pointer;
+        }
+    }
+
+    &__sidebar {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        @media ( min-width: $screen-md-min ) {
+            display: none;
+        }
+    }
+}

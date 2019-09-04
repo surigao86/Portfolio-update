@@ -1,0 +1,49 @@
+
+.navigation-mobile {
+
+    a {
+        font-size: 1.4rem;
+        text-decoration: none;
+    }
+
+    &,
+    &__sub,
+    &__item {
+        margin: 0;
+        padding: 0;
+
+        list-style: none;
+    }
+
+    &__item {
+        margin-bottom: $gutter;
+
+        &--hidden {
+            display: none;
+        }
+        
+        > a {
+            font-weight: 600;
+            text-transform: uppercase;
+            color: $color-purple;
+        }
+    }
+
+    &__subitem {
+        margin: 0.4rem 0;
+        
+        > a {
+            color: #545457;
+
+            &:hover {
+                color: #2a2a2b;
+            }
+        }
+    }
+
+    &__nav-divider {
+        width: calc( 100% + 4rem);
+        margin: 1.4rem -2rem;
+    }
+
+}

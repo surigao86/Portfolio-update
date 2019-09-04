@@ -1,0 +1,49 @@
+@import "config";
+
+.homepage {
+    background: lighten(#52556e, 20%);
+    background-size: 1435px;
+
+    &__hero {
+        margin: 0 auto 10rem;
+    }
+    .headline {
+        color: #fefefe;
+
+        @media( min-width: $screen-md-min ) {
+            font-size: 4.6rem;
+        }
+    }
+    .subheadline {
+        color: #d3d5e6;
+
+        @media( min-width: $screen-md-min ) {
+            font-size: 2.5rem;
+            line-height: 3.3rem;
+        }
+    }
+    
+
+    &__content {
+        @media( min-width: $screen-md-min ) {
+            padding: 0 6.6rem;
+        }
+
+        h3 {
+            font-size: 2rem;
+            color: #92bad2;
+        }
+        p {
+            font-size: 1.6rem;
+            color: #f0e9f0;
+        }
+
+        a {
+            color: #ebb85c;
+        }
+    }
+
+    &__title {
+        color: #ccc;
+    }
+}

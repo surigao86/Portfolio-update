@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Muey Surigao Portfolio</title>
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" type="text/css" href="_assets/css/main.css">
+
+    <!-- homepage specific CSS -->
+    <link rel="stylesheet" type="text/css" href="_assets/css/home.css">
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="_assets/js/libs/jquery-3.4.1.min.js"></script>
+
+    <!-- global JS -->
+    <script type="text/javascript" src="_assets/js/main.js"></script>
+
+
+    <!-- load typekit: proxima-nova webfonts - async -->
+    <script>
+      (function(d) {
+        var config = {
+          kitId: 'snh4sns',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script>
+
+</head>
+<body class="home">
+    <div class="wrap">
+    <div class="wrap__content">
+        
+        <!-- {{ include header.html }} -->
+        <header class="header-wrap">
+            <div class="header">
+                <a href="/" class="header__logo"></a>
+                <nav class="header__navigation">
+                    
+                    <!-- {{ include navigation.html className="navigation" }} -->
+                    <ul class="navigation">
+                        <li class="navigation__item">
+                            <a href="/">Home</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="/portfolio/">Portfolio</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="/about/">About</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="/contact-form/">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__mobile">
+                    <a class="header__toggle mobile-button action-toggle-sidebar"><span>Toggle Mobile Navigation</span></a>
+                </div>
+            </div>
+        </header>
+        
+
+        <!-- CONTENT -->
+        <section class="segment homepage">
+            <div class="container">
+                <div class="row text-center homepage__hero">
+                    <div class="col-md-6 col-md-offset-3">
+                        <h1 class="heading-lite headline">Muey Surigao Portfolio</h1>
+                        <p class="subheadline">Web Developer, San Francisco</p>
+                    </div>
+                </div>
+                <h2 class="homepage__title">Portfolio</h2>
+                <div class="row homepage__portfolio">
+                    
+                    <div class="col-xs-6 col-md-4">
+                        <a href="/portfolio/test" class="portfolio-box__wrap">
+                            <div class="portfolio-box__image">
+                                <img src="_assets/images/portfolio/portfolio01.jpg">
+                            </div>
+                            <div class="portfolio-box__text">
+                                <h3 class="portfolio-box__title">Some Text</h3>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-xs-6 col-md-4">
+                        <a href="/portfolio/test" class="portfolio-box__wrap">
+                            <div class="portfolio-box__image">
+                                <img src="_assets/images/portfolio/portfolio02.jpg">
+                            </div>
+                            <div class="portfolio-box__text">
+                                <h3 class="portfolio-box__title">Some Text</h3>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-xs-6 col-md-4">
+                        <a href="/portfolio/test" class="portfolio-box__wrap">
+                            <div class="portfolio-box__image">
+                                <img src="_assets/images/portfolio/portfolio03.jpg">
+                            </div>
+                            <div class="portfolio-box__text">
+                                <h3 class="portfolio-box__title">Some Text</h3>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-xs-6 col-md-4">
+                        <a href="/portfolio/test" class="portfolio-box__wrap">
+                            <div class="portfolio-box__image">
+                                <img src="_assets/images/portfolio/portfolio01.jpg">
+                            </div>
+                            <div class="portfolio-box__text">
+                                <h3 class="portfolio-box__title">Some Text</h3>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-xs-6 col-md-4">
+                        <a href="/portfolio/test" class="portfolio-box__wrap">
+                            <div class="portfolio-box__image">
+                                <img src="_assets/images/portfolio/portfolio02.jpg">
+                            </div>
+                            <div class="portfolio-box__text">
+                                <h3 class="portfolio-box__title">Some Text</h3>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-xs-6 col-md-4">
+                        <a href="/portfolio/test" class="portfolio-box__wrap">
+                            <div class="portfolio-box__image">
+                                <img src="_assets/images/portfolio/portfolio03.jpg">
+                            </div>
+                            <div class="portfolio-box__text">
+                                <h3 class="portfolio-box__title">Some Text</h3>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </section>
+
+
+        
+        <!-- {{ include footer.html }} -->
+        <footer class="footer">
+            <div class="container">
+                <!-- <a href="/"><img class="footer__logo" src="_assets/images/logo-white.svg" alt="Muey Surigao Logo"></a> -->
+                <p class="social-icons">
+                    <a class="social-facebook" href="https://www.facebook.com/mueysurigao"><img src="_assets/images/facebook.svg" style="height: 24px;"></a>
+                    <a class="social-twitter" href="https://www.twitter.com/mueysurigao"><img src="_assets/images/twitter.svg" style="height: 24px;"></a>
+                    <a class="social-linkedin" href="https://www.linkedin.com/company/mueysurigao"><img src="_assets/images/linkedin.svg" style="height: 24px;"></a>
+                </p>
+                <p class="copyright">
+                    <span class="copyright__text">&copy; 2019 MueySurigao</span> 
+                    <span class="sep"></span> 
+                    <a href="/">Home</a> 
+                    <span class="sep"></span> 
+                    <a href="/portfolio">Portfolio</a> 
+                    <span class="sep"></span> 
+                    <a href="/about">About</a>
+                    <span class="sep"></span> 
+                    <a href="/contact">Contact</a>
+                </p>
+            </div>
+        </footer>
+
+    </div>
+    <div class="wrap__sidebar">
+        
+        <!-- {{ include sidebar.html }} -->
+        <aside class="sidebar">
+            <nav class="sidebar__navigation">
+                
+                <!-- {{ include navigation.html className="navigation-mobile" }} -->
+                <ul class="navigation-mobile">
+                    <li class="navigation-mobile__item">
+                        <a href="/">Home</a>
+                    </li>
+                    <li class="navigation-mobile__item">
+                        <a href="/portfolio/">Portfolio</a>
+                    </li>
+                    <li class="navigation-mobile__item">
+                        <a href="/about/">About</a>
+                    </li>
+                    <li class="navigation-mobile__item">
+                        <a href="/contact-form/">Contact</a>
+                    </li>
+                </ul>
+
+            </nav>
+            <div class="sidebar__social">
+                <ul>
+                    <li>
+                        <a href="//twitter.com/mueysurigao">Twitter</a>
+                    </li>
+                    <li>
+                        <a href="//facebook.com/mueysurigao">Facebook</a>
+                    </li>
+                    <li>
+                        <a href="//www.linkedin.com/company/mueysurigao">Linkedin</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar__footer">
+                &copy; 2019 Muey Surigao
+            </div>
+        </aside>
+
+    </div>
+</div>
+</body>
+</html>
